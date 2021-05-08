@@ -1,0 +1,1100 @@
+-------------------------------------------- SCREEN 001
+\ <FLIES> LOAD SCREEN    < 1/20/87>141  
+PAGE                                    
+." Loading BIOLOGY (GEN) flies"         
+CR CR CR PATCH                          
+                                        
+[EXEC]                                  
+  149 173 THRU                          
+                                        
+[FORTH]                                 
+\ -1 SAVE-VDP +! PUT-LOADER             
+49 TO GENC 16967 TO DID1                
+1 TO DISK# 21328 TO DID2                
+                                        
+WRITE-LOADER                            
+MARK-FORGET                             
+3 BUFFERS UNPATCH                       
+                                        
+\ path data is on block 279             
+\ and must be copied to block 1         
+\ of the run/compile disk               
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 009
+\ SEED RANDOM            < 8/ 7/86>149  
+EXIT                                    
+                                        
+VARIABLE SEED                           
+                                        
+: RANDOM  ( n -- )                      
+    SEED @ U* SWAP DROP                 
+    SEED @ 25717 U* DROP                
+    4311 + SEED ! ;                     
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 010
+\ WORLD EMBARK VIR-ADR   < 6/10/87>150  
+                                        
+1 CONSTANT WORLD                        
+                                        
+\ : WORLD  ( -- n )                     
+\    PATHDATA BLK-START ;               
+  \ Start block for path data           
+  \ Note: DROP-OFF on screen 152        
+  \ gives last block of path data       
+                                        
+250 XCONSTANT EMBARK                    
+  \ Vir-adr of first path description   
+                                        
+X: VIR-ADR   ( vir-adr -- adr )         
+    \ Given virtual address,            
+    \ return address in buffer          
+    0 1K U/MOD WORLD + BLOCK + X;       
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ FAH    
+-------------------------------------------- SCREEN 011
+\ PATHS @PATH            < 8/ 7/86>151  
+                                        
+X: PATHS  ( -- adr )                    
+    \ Start of array that holds all     
+    \ defined paths. First word in      
+    \ paths is count of number of       
+    \ path descriptions in the array.   
+    \ Array extends to EMBARK.          
+    2 VIR-ADR X;                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 012
+\ PATH                   < 8/ 7/86>152  
+                                        
+X: PATH    ( index -- adr )             
+    \ Given index, fetch path adr       
+    DUP PATHS @ < NOT                   
+    RUN-ERR" No path"                   
+    2* 2+ PATHS + @ X;                  
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 013
+\ DOCUMENTATION          < 8/ 7/86>153  
+                                        
+EXIT                                    
+                                        
+This concludes the primitives necessary 
+for fetching path data from disk.       
+                                        
+Now we'll define the structure of a     
+path description and some useful words  
+for working with path descriptions.     
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 014
+\ FIELD CONTINUED END    < 1/20/87>154  
+                                        
+\ point to fields within record         
+X: CONTINUED  ( a -- a')     X;         
+X: END        ( a -- a')  2+ X;         
+X: CURRENT-PT ( a -- a') 4 + X;         
+X: NUM-PTS    ( a -- a') 6 + X;         
+X: POINTS     ( a -- a') 8 + X;         
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 015
+\ X(I) Y(I) (WAIT)       < 8/ 7/86>155  
+                                        
+X: X(I)   ( a -- a')    X;              
+X: Y(I)   ( a -- a') 1+ X;              
+X: (WAIT) ( a -- a') 2+ X;              
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 016
+\ FRAME READ             < 8/ 7/86>156  
+                                        
+XVARIABLE FRAME                         
+                                        
+X: READ   ( adr -- )                    
+   \ Make path description at adr       
+   \ current.                           
+   FRAME ! X;                           
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 017
+\ MAX-PATHS MILEAGE ITIN < 8/ 7/86>157  
+                                        
+10 CONSTANT MAX-PATHS                   
+   \ Maximum number of paths that       
+   \ be activated                       
+                                        
+X: MILEAGE  ( -- n )                    
+   \ Length of array for active paths   
+   MAX-PATHS 2* 4 + X;                  
+                                        
+XCREATE ITINERARY MILEAGE ALLOT         
+                                        
+X: DESTINATION  ( -- adr )              
+   \ Adr of end of ITINERARY            
+   ITINERARY MILEAGE + X;               
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 018
+\ JOURNEY ACTIVE         < 8/ 7/86>158  
+                                        
+X: JOURNEY  ( -- )                      
+   \ Clear all paths in ITINERARY       
+   ITINERARY MILEAGE 0 FILL X;          
+                                        
+X: ACTIVE   ( adr -- )                  
+   \ Make path at adr active.           
+   DUP 0=                               
+   ITINERARY @ MAX-PATHS 1- > OR        
+   IF                                   
+      DROP                              
+   ELSE                                 
+      ITINERARY DUP @ 2* + 2+ !         
+      1 ITINERARY +!                    
+   THEN X;                              
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 019
+\ REPLACE DELETE         < 8/ 7/86>159  
+                                        
+X: REPLACE  ( adr1 adr2 -- )            
+   \ Find adr in ITINERARY and          
+   \ replace it with adr1               
+  ITINERARY 2+ DUP MAX-PATHS 2* + SWAP  
+  DO DUP I @ =                          
+   IF OVER I ! THEN                     
+  2 +LOOP DDROP X;                      
+                                        
+X: DELETE  ( adr -- )                   
+   \ Delete adr from ITINERARY          
+   ITINERARY @ 2* ITINERARY 2+ +        
+   ITINERARY 2+                         
+   DO DUP I @ =                         
+   IF I DUP 2+ SWAP                     
+    DUP DESTINATION                     
+    SWAP - BMOVE                        
+    -1 ITINERARY +! LEAVE               
+   THEN                                 
+   2 +LOOP DROP X;                      
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 020
+\ DOCUMENTATION          < 8/ 7/86>160  
+                                        
+EXIT                                    
+                                        
+SYNTAX:                                 
+                                        
+      JOURNEY -- Clears all path        
+                 descriptions from      
+                 active path list.      
+                                        
+n PATH ACTIVE -- Puts path description  
+                 on active path list.   
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 021
+\ ZBOX                   < 1/20/87>161  
+                                        
+X: ZBOX ( X Y -- )                      
+   1 SETMODE                            
+   7 - SWAP 7 - SWAP 14 14 DSWAP BOX X; 
+                                        
+EXIT                                    
+   1 SETMODE                            
+   DDUP                  HPLOT          
+   SWAP 7 - SWAP 7 -                    
+   DDUP                  POINT          
+   SWAP 14 + SWAP                       
+   DDUP                  LINE-TO        
+   14 +                                 
+   DDUP                  LINE-TO        
+   SWAP 14 - SWAP                       
+   DDUP                  LINE-TO        
+   14 -                  LINE-TO ;      
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 022
+\  CAPTURE               < 8/ 7/86>162  
+                                        
+X: CAPTURE  ( x y -- )                  
+    QTERM                               
+    IF                                  
+      ZBOX                              
+      -1 ITINERARY !                    
+    ELSE                                
+      DDROP                             
+    THEN X;                             
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 023
+\ (TRANSLATE)            < 8/ 7/86>163  
+                                        
+\ The following words allow us to       
+\ switch point translation words into   
+\ the path description interpreter.     
+                                        
+EXIT NOT USED                           
+                                        
+: (TRANSLATE) NOOP ;                    
+    \ This is the vector word in        
+    \ @XY (to be defined presently).    
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 024
+\ MAX-Y XYEXPAND XY @XY  < 8/ 7/86>164  
+                                        
+\ 192 CONSTANT MAX-Y                    
+                                        
+X: XYEXPAND   ( n -- x y )              
+   0 192 U/MOD SWAP X;                  
+\  0 MAX-Y U/MOD SWAP X;                
+                                        
+X: XY     ( n -- adr )                  
+    FRAME @ SWAP                        
+    4 * + POINTS X;                     
+                                        
+X: @XY     ( n -- x y )                 
+    XY @ XYEXPAND X;                    
+\ no (TRANSLATE) functions anyway       
+\   XY @ XYEXPAND (TRANSLATE) X;        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 025
+\ @WAIT                  < 8/ 7/86>165  
+                                        
+X: @WAIT  ( pt-index -- n )             
+    XY (WAIT) C@ X;                     
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 026
+\ .VECTOR .ROUTINE       < 8/ 7/86>166  
+                                        
+XVARIABLE .VECTOR \ Execution vector    
+                 \ for plot routines    
+                                        
+EXIT NOT NEEDED FOR FLIES               
+: .ROUTINE  ( Defining: -- )            
+    \ .ROUTINE <name> <plot word>       
+    CREATE                              
+      FIND DUP NOT                      
+      IF                                
+        DROP ' BEEP CFA                 
+      THEN                              
+      ,                                 
+    DOES>  ( -- )                       
+      @ .VECTOR ! ;                     
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 027
+\ DIRECTION PLOT-PT      < 8/ 7/86>167  
+                                        
+X: DIRECTION @ X;                       
+                                        
+X: PLOT-PT  ( adr adr  -- )             
+    \ Given adr in ITINERARY and adr    
+    \ of path, plots point stored       
+    \ in CURRENT-PT                     
+    DUP VIR-ADR READ                    
+    DUP VIR-ADR CURRENT-PT D@ <         
+    IF                                  
+         VIR-ADR CONTINUED @            
+         SWAP @ REPLACE                 
+    ELSE                                
+      VIR-ADR CURRENT-PT DIRECTION      
+      .VECTOR @ EXECUTE                 
+      1 SWAP @ VIR-ADR CURRENT-PT +!    
+    THEN X;                             
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 028
+\ 0-CUR-PT 0-PATHS SADDL < 8/ 7/86>168  
+                                        
+X: 0-CUR-PT  ( adr -- )                 
+    0 SWAP VIR-ADR CURRENT-PT !         
+   ( UPDATE ) X;                        
+                                        
+X: 0-PATHS   ( adr -- )                 
+    BEGIN                               
+      DUP 0-CUR-PT                      
+      VIR-ADR @ DUP 0=                  
+    UNTIL DROP X;                       
+                                        
+X: SADDLE-UP  ( -- )                    
+    \ Reset CURRENT-PT in all active    
+    \ paths.                            
+    ITINERARY @                         
+    IF ITINERARY DUP @ 0                
+     DO                                 
+      DUP 2+ I 2* +                     
+      @ 0-PATHS                         
+     LOOP DROP                          
+    THEN X;                             
+                                        
+                                        
+-------------------------------------------- SCREEN 029
+\  ROUND  CURVES         < 8/ 7/86>169  
+                                        
+X: ROUND  ( -- )                        
+    ITINERARY @  0                      
+    DO                                  
+       ITINERARY 2+ I 2* + DUP @        
+       IF                               
+          DUP @ PLOT-PT                 
+       ELSE                             
+          DROP                          
+       THEN                             
+       ITINERARY @  -1 =                
+       IF                               
+          LEAVE                         
+       THEN                             
+     LOOP 0 DELETE X;                   
+                                        
+X: CURVES  ( -- )                       
+   BEGIN                                
+     ITINERARY @ 0>                     
+   WHILE                                
+     ROUND                              
+   REPEAT X;                            
+                               \ LRP    
+-------------------------------------------- SCREEN 030
+\ KILL-TIME              < 8/ 7/86>170  
+                                        
+X: KILL-TIME  ( index -- )              
+   @WAIT 80 * 0 DO LOOP X;              
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 031
+\ (MOVING-DOT) MOVING-DOT< 8/ 7/86>171  
+                                        
+X: POINT ( X Y -- )                     
+   SWAP DUP 1+ SETENDPTS HLINE X;       
+                                        
+X: (MOVING-DOT) ( index -- )            
+   DUP KILL-TIME                        
+   DUP 0=                               
+   0 SETMODE                            
+   IF                                   
+     @XY POINT                          
+   ELSE                                 
+     DUP 1- @XY POINT                   
+     DUP    @XY POINT                   
+            @XY CAPTURE                 
+   THEN X;                              
+                                        
+X: MOVING-DOT                           
+   X' (MOVING-DOT) CFA .VECTOR ! X;     
+EXIT                                    
+.ROUTINE MOVING-DOT (MOVING-DOT)        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 032
+( <FLIES>                < 1/20/87>172) 
+                                        
+\ All path block must remain resident   
+\ in the file buffers                   
+X: <FLIES>                              
+    JOURNEY                             
+    MOVING-DOT                          
+    BEGIN QTERM NOT                     
+    WHILE 0 PATH ACTIVE                 
+      1 PATH ACTIVE                     
+      2 PATH ACTIVE                     
+      3 PATH ACTIVE                     
+      4 PATH ACTIVE                     
+      5 PATH ACTIVE                     
+      SADDLE-UP                         
+      CURVES                            
+    REPEAT                              
+    [ HEX ] C010 C@ [ DECIMAL ] DROP    
+    2 RANDOM TINT !                     
+    5 SETMODE X;                        
+                                        
+                                        
+                                        
+                               (  PAI ) 
+-------------------------------------------- SCREEN 033
+\ FLIES                  < 8/ 7/86>173  
+                                        
+EXCODE:                                 
+   <FLIES>                              
+   2 RANDOM TINT !                      
+   CLEANUP                              
+EX;                                     
+                                        
+KEY: FLIES                              
+   LOADER INSCR?                        
+   !EXCODE ;                            
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 110
+\ TEST DATA              < 8/ 7/86>250  
+                                        
+                                        
+3 GUIDES                                
+    0     0                             
+    120   0                             
+    120 150                             
+                                        
+15 BEZIER                               
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 111
+\ TEST DATA              < 8/ 7/86>251  
+                                        
+                                        
+4 GUIDES                                
+    0     0                             
+    150   0                             
+    10   50                             
+    200  150                            
+                                        
+15 BEZIER                               
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 112
+\ TEST DATA              < 8/ 7/86>252  
+                                        
+ 6 GUIDES                               
+    0     0                             
+    120   0                             
+     0   120                            
+    200  100                            
+     0    0                             
+    75   80                             
+                                        
+15 BEZIER                               
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 114
+\ TEST DATA              < 8/ 7/86>254  
+                                        
+ 6 GUIDES                               
+    50    0                             
+    150  250                            
+    120   50                            
+     50  120                            
+    250  150                            
+     50   0                             
+                                        
+20 BEZIER                               
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 115
+\ TEST DATA              < 8/ 7/86>255  
+                                        
+ 6 GUIDES                               
+    50    0                             
+    150  250                            
+    120   50                            
+     50  120                            
+    250  150                            
+     50   0                             
+                                        
+20 BEZIER                               
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 116
+\                        < 8/ 7/86>256  
+                                        
+3 GUIDES                                
+   0   0                                
+   120 0                                
+   120 150                              
+                                        
+CLS  DOTTED                             
+                                        
+15 BEZIER               KEY DROP        
+                                        
+10 WAIT                                 
+$IN MERRY.CHRISTMAS                     
+                                        
+                                        
+257 LOAD                                
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 117
+\                        < 8/ 7/86>257  
+                                        
+CLS                                     
+                                        
+CLS  DOTTED      CURVE  KEY DROP        
+CLS  CONNECTED   CURVE  KEY DROP        
+CLS  WORDY       CURVE  KEY DROP        
+CLS  MOVING-CHAR CURVE  KEY DROP        
+CLS  MOVING-DOT  CURVE  KEY DROP        
+CLS  ARROW       CURVE  KEY DROP        
+CLS  WRAP-AROUND CURVE                  
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 118
+\                        < 8/ 7/86>258  
+                                        
+                                        
+\ TEST POSITION FUNCTION                
+                                        
+                                        
+: TEST                                  
+    100 0 DO I 0 POSITION               
+             CURVE                      
+          10 +LOOP ;                    
+EXIT                                    
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 119
+\                        < 8/ 7/86>259  
+                                        
+\ TEST POSITION FUNCTION                
+                                        
+                                        
+CONNECTED                               
+                                        
+CLS                                     
+TEST                                    
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 130
+\ TEST DATA              < 8/ 7/86>252  
+                                        
+ 6 GUIDES                               
+    120  12                             
+    200  12                             
+    120  120                            
+    320  100                            
+     80   0                             
+    120  80                             
+                                        
+25 BEZIER                               
+                                        
+ 8 WAIT                                 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 131
+\                        < 8/ 7/86>271  
+                                        
+                                        
+5 GUIDES                                
+    140   12                            
+    350   30                            
+    120   80                            
+      0   35                            
+    140   12                            
+                                        
+30 BEZIER                               
+                                        
+                                        
+10 WAIT                                 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 132
+\                        < 8/ 7/86>272  
+                                        
+                                        
+5 GUIDES                                
+    140  110                            
+    190   50                            
+    100    0                            
+     60   75                            
+    140  110                            
+                                        
+32 BEZIER                               
+                                        
+                                        
+ 9 WAIT                                 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 133
+\                        < 8/ 7/86>273  
+                                        
+                                        
+5 GUIDES                                
+    160   90                            
+    100   50                            
+     80    0                            
+     40   75                            
+    160   90                            
+                                        
+28 BEZIER                               
+                                        
+                                        
+ 7 WAIT                                 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 134
+\                        < 8/ 7/86>274  
+                                        
+                                        
+5 GUIDES                                
+    160   50                            
+      0   90                            
+     80    0                            
+    240  100                            
+    160   90                            
+                                        
+30 BEZIER                               
+                                        
+                                        
+ 8 WAIT                                 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               \ LRP    
+-------------------------------------------- SCREEN 135
+\                        < 8/ 7/86>274  
+                                        
+                                        
+6 GUIDES                                
+    180   10                            
+    280   20                            
+    300   80                            
+    190  250                            
+     50   30                            
+    180   10                            
+                                        
+30 BEZIER                               
+                                        
+                                        
+ 8 WAIT                                 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 136
+\ FLIES                  < 8/ 7/86>276  
+                                        
+: <FLIES>                               
+    MOVING-DOT                          
+    BEGIN                               
+      QTERM NOT                         
+    WHILE                               
+      0 PATH ACTIVE                     
+      1 PATH ACTIVE                     
+      2 PATH ACTIVE                     
+      3 PATH ACTIVE                     
+      4 PATH ACTIVE                     
+      5 PATH ACTIVE                     
+      SADDLE-UP                         
+      CURVES                            
+    REPEAT                              
+    [ HEX ] C010 C@ [ DECIMAL ] DROP ;  
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 137
+\                        < 8/ 7/86>277  
+                                        
+: BOX   ( X Y -- )                      
+   1 SETMODE                            
+   DDUP                  HPLOT          
+   SWAP 7 - SWAP 7 -                    
+   DDUP                  POINT          
+   SWAP 14 + SWAP                       
+   DDUP                  LINE-TO        
+   14 +                                 
+   DDUP                  LINE-TO        
+   SWAP 14 - SWAP                       
+   DDUP                  LINE-TO        
+   14 -                  LINE-TO ;      
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 138
+\                        < 8/ 7/86>278  
+                                        
+: TEST                                  
+    QTERM                               
+    IF                                  
+      DDUP BOX                          
+      [ HEX ] C010 C@ [ DECIMAL ] DROP  
+    THEN ;                              
+                                        
+: TT                                    
+     BEGIN                              
+       QTERM                            
+     UNTIL                              
+     TEST ;                             
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
