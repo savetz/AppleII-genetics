@@ -5,3 +5,6 @@ This is the source code for Modern Biology: Genetics, a program for the Apple II
 
 You can run the program in your browser here: https://archive.org/details/wozaday_Modern_Biology_Genetics
 
+!(Screenshot)[screenshot1.png]
+!(Screenshot)[screenshot2.png]
+!(Screenshot)[screenshot3.png]
