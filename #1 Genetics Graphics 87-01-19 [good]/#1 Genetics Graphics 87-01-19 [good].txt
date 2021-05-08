@@ -1,0 +1,275 @@
+-------------------------------------------- SCREEN 102
+( WIN SCREEN CONT.       < 3/ 1/86>242) 
+                                        
+   MSG 1000 AT  45  50 \  CONGRADS      
+   MSG   +1 AT  +9 +12 \  PLAY AGAIN    
+   MSG  989 AT   0 164                  
+   MSG   +1 AT +17   S TCODE 3          
+   MSG   +1 AT +25   S TCODE 3          
+   MSG 1011 AT   0 +10  \  PRESS <RTN>  
+   TEMIT 32                             
+   NOMSG TCODE 158  \ CLRTIMER          
+   NOMSG TCODE 160  \ TIMEOFF           
+                                        
+   NOMSG TCODE 251  \ Y/N               
+                                        
+?GOBACK 52     \ IF Y RE-START          
+ \ WAS  49 4-8 FAH                      
+                                        
+NOMSG END                               
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 103
+( RETURN                 < 3/ 1/86>243) 
+                                        
+DIR NEXT (  279  )                      
+  FORMAT 0 COLOR 0                      
+  NOGRAPH RUN 0                         
+DOES                                    
+                                        
+   NOMSG TCODE 23                       
+                                        
+NOMSG END                               
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 110
+( DEMO FORMAT SCRN       < 2/18/86>250) 
+                                        
+                                        
+DIR NEXT (  272  )                      
+  FORMAT 19 COLOR 5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+                                        
+   NOMSG TCODE 156 \ PROBINIT           
+   NOMSG TCODE 157 \ DRAWMAZE           
+PUTBAR   0 AT  3   3 DIM 135 132        
+PUTBAR   0 AT  0 164 DIM  90  21        
+                                        
+NOMSG END                               
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 124
+( ALG1 DSK 2 MAIN MENU   < 4/ 7/86>264) 
+                                        
+DIR NEXT ( 5 )                          
+  FORMAT 14 COLOR 14                    
+  NOGRAPH RUN 0                         
+DOES                                    
+NOMSG TCODE 18                          
+GRAPHIC 4 AT 0 55                       
+PUTBAR 99 AT 0 5 DIM 25 37              
+GRAPHIC 39 AT 5 42                      
+  MSG 482 AT  4   9 TCODE 1             
+  MSG  +1 AT  S +10 TCODE 1             
+  MSG  +1 AT  S +10 TCODE 1             
+  MSG  25 AT 55  15                     
+  MSG  +1 AT 45  52 MENU> 1             
+  MSG  +1 AT  S +12                     
+  MSG  +1 AT  S +26 MENU> 2             
+  MSG  +1 AT  S +12                     
+  MSG  +1 AT  S +26 MENU> 3             
+  MSG  74 AT 35 175                     
+NOMSG RESP 17 END                       
+                                        
+                                        
+                               ( WHO? ) 
+-------------------------------------------- SCREEN 125
+( MENU                   < 4/ 7/86>265) 
+LABEL 1                                 
+DIR NEXT ( 5 )                          
+  FORMAT 14 COLOR 14                    
+  NOGRAPH RUN 0                         
+DOES                                    
+  NOMSG TCODE 162 RESP 1 \ TO MFP       
+  NOMSG TCODE  53    \ Set TOPICMENU    
+  GRAPHIC 7 AT  0 55                    
+  MSG 1004 AT  55  15                   
+  MSG   66 AT  50  40                   
+  PUTBAR 3 AT   S  +9 DIM 17 1          
+  MSG 1005 AT   S  +4 MENU> 4           
+  MSG   +1 AT   S +12                   
+  MSG   +1 AT   S +15                   
+  MSG   +1 AT  55 +15 MENU> 5           
+  MSG   +1 AT   S +12 MENU> 6           
+  MSG   70 AT  50 +17                   
+  PUTBAR 3 AT   S  +9 DIM 30 1          
+  MSG 1010 AT   S  +4 MENU> 10          
+  MSG   73 AT   S +12 MENU> 11          
+  MSG   74 AT  30 175                   
+NOMSG RESP 17 END                       
+                               ( WHO? ) 
+-------------------------------------------- SCREEN 126
+( MENU FRP               < 4/ 7/86>265) 
+LABEL 2                                 
+DIR NEXT                                
+  FORMAT 14 COLOR 14                    
+  NOGRAPH RUN 0                         
+DOES  NOMSG TCODE 53 \ Set TOPICMENU    
+  NOMSG TCODE  18 \ CHECKMARK CURSOR ON 
+  NOMSG TCODE 162 RESP 0 \ TO MFP       
+  GRAPHIC 7 AT  0 55                    
+  MSG   64 AT  45   8                   
+  MSG   +1 AT  60 +10                   
+  MSG   +1 AT  50  42                   
+  PUTBAR 3 AT   S +11 DIM 20 1          
+  MSG   +1 AT   S  +4 MENU> 12          
+  MSG   +1 AT   S +13 MENU> 13          
+  MSG   +1 AT   S +13 MENU> 14          
+  MSG   +2 AT   S +13 MENU> 15          
+  MSG   +1 AT   S +13 MENU> 16          
+  MSG   70 AT   S +15                   
+  PUTBAR 3 AT   S +11 DIM 33 1          
+  MSG  170 AT   S  +4 MENU> 4           
+  MSG   73 AT   S +13 MENU> 5           
+  MSG   74 AT  35 175                   
+NOMSG RESP 17 END                       
+-------------------------------------------- SCREEN 130
+( LOAD MODIFICATIONS     < 3/17/86>270) 
+PAGE ." CHANGES ALREADY IN SYSTEM!" CR  
+." SEE SCREEN 275 FOR TPLANTS USED" CR  
+CR CR EXIT                              
+      271     LOAD \ CHANGES            
+\     272 273 THRU \ Y/N \ IN OVERLAY 1 
+                                        
+      275     LOAD \ TPLANT             
+EXIT                                    
+You should have 2 TCODEs to toggle the  
+constant MFP.                           
+                                        
+At the MFP menu, toggle MFP to true.    
+                                        
+At the FRP menu, toggle MFP to false.   
+                                        
+This is what the game refers to when    
+it picks the problems.                  
+                                        
+Block 271 has a TCODE change(s) and/or  
+addition(s).                            
+                                        
+Block 275 plants the TCODEs.            
+                                        
+-------------------------------------------- SCREEN 131
+( MODIFICATIONS TO TCODES< 1/29/86>271) 
+                                        
+0 CONSTANT MFP                          
+                                        
+: TLOOP ( -- )                          
+   TLOOP                                
+   LEVEL 2/ 1+ ^DIR + GOTO ;            
+                                        
+: ?MFP ( -- )                           
+   MFP TO T/F ;                         
+                                        
+                                        
+0 CONSTANT NUMPROB                      
+                                        
+: ?NUMPROB ( -- )                       
+   NUMPROB TO T/F ;                     
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 132
+( Y/N                    < 3/17/86>272) 
+                                        
+: VALID ( ASCII -- F )                  
+   DUP ASCII Y = SWAP                   
+   ASCII N = OR ;                       
+                                        
+: GET-CHAR ( -- N )                     
+   KEY DUP VALID                        
+      IF                                
+         DUP EMIT                       
+         KEY 13 = NOT                   
+         IF                             
+            DROP 0                      
+         THEN                           
+      THEN                              
+   ;                                    
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 133
+( Y/N                    < 3/17/86>273) 
+                                        
+: Y/N ( -- ) \ SETS T/F                 
+   BEGIN                                
+   @CURSOR GET-CHAR DUP VALID DUP >R    
+      IF                                
+         ASCII Y = TO T/F               
+         DDROP                          
+      ELSE                              
+         DROP DDUP !CURSOR 2 SPACES     
+         !CURSOR                        
+      THEN                              
+   R> UNTIL ;                           
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 135
+( MODIFICATIONS TPLANTS  < 3/16/85>275) 
+EXIT this is of a list of the TCODES    
+  defined in the EVAL virtual and       
+  planted in DBOS2,                     
+                                        
+' !MFP        255 162 TPLANT            
+' !NUMPROB    255 163 TPLANT            
+' TLOOP       255 155 TPLANT            
+' PROBINIT    255 156 TPLANT            
+' DRAWMAZE    255 157 TPLANT            
+' CLRTIMER    255 158 TPLANT            
+' TIMEON      255 159 TPLANT            
+' TIMEOFF     255 160 TPLANT            
+' ?.TIME      255 161 TPLANT            
+' ?MFP        255 217 TPLANT (WAS 279)  
+' ?NUMPROB    255 199 TPLANT            
+                                        
+1 GET-OVERLAY                           
+                                        
+' Y/N           1 251 TPLANT            
+                                        
+                                        
+                                        
+                                        

@@ -1,0 +1,1975 @@
+-------------------------------------------- SCREEN 049
+(                        < 7/ 3/85>189) 
+EXIT                                    
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 050
+(                        < 7/ 3/85>190) 
+EXIT                                    
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( GRW)   
+-------------------------------------------- SCREEN 051
+(                        < 7/ 3/85>191) 
+EXIT                                    
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( GRW)   
+-------------------------------------------- SCREEN 052
+( SB 30  A               < 7/ 3/85>192) 
+DIR NEXT (  29  )                       
+  FORMAT 13 COLOR 5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+                                        
+  PUTBAR 4 AT 100 176 DIM 30 13         
+  MSG    837 AT 0 4                     
+  MSG     +1 AT 0 14                    
+                                        
+  NOMSG END                             
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 053
+( GCF FACTORING PROBLEM  < 7/ 3/85>193) 
+                                        
+DIR NEXT (  30  )                       
+  FORMAT 0 COLOR 5                      
+  NOGRAPH RUN 0                         
+DOES                                    
+                                        
+ NOMSG TCODE 231 \ SELECT PROBLEM       
+ NOMSG TCODE 253 \ SET UP ANSWER        
+ PUTBAR 0 AT 0  40 DIM 250 100          
+                                        
+ NOMSG END                              
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 054
+( DISPLAY PROBLEM        < 7/ 3/85>194) 
+DIR NEXT (  31  )                       
+  FORMAT  0  COLOR   5                  
+  NOGRAPH RUN 0                         
+DOES                                    
+PUTBAR 0 AT 0  50  DIM 140 60           
+PUTBAR 0 AT 0 155  DIM  90 30           
+PUT  10   50                            
+NOMSG TCODE 254 \ DISPLAY PROBLEM       
+LINEWIDTH 1                             
+BOX 10 AT 10 70                         
+DIM 240 30                              
+  MSG 839 AT 60 80                      
+MSG 956 AT 17 S                         
+PUT 35 80 NOMSG TCODE 232               
+NOMSG TCODE 246   PUT 85 80             
+NOMSG TCODE 232   NOMSG TCODE 246       
+PUT 10 120  NOMSG TCODE 254 \ DIS.PROB. 
+  NOMSG TCODE 232 \ PRINT =             
+NOMSG TCODE 246 \ PRINT FACTOR          
+NOMSG TCODE 175 \ DISPLAY               
+                                        
+EXIT                                    
+                                        
+-------------------------------------------- SCREEN 055
+(                        < 7/ 3/85>195) 
+                                        
+                                        
+NOMSG TCODE 252 \ DISSPLAY ANS          
+NOMSG TCODE 174                         
+ MSG 114 AT 0 155  TCODE 3              
+ MSG 140 AT 0 165  UP 3   DOWN 1        
+ MSG 141 AT 0 175 NOMSG TCODE 7         
+ ?GOBACK 1   NOMSG                      
+ END                                    
+EXIT                                    
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 056
+(                        < 7/ 3/85>196) 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( GRW)   
+-------------------------------------------- SCREEN 057
+(                        < 7/ 3/85>197) 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( GRW)   
+-------------------------------------------- SCREEN 058
+(                        < 7/ 3/85>198) 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( GRW)   
+-------------------------------------------- SCREEN 059
+(                        < 7/ 3/85>199) 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( GRW)   
+-------------------------------------------- SCREEN 060
+(                        < 7/ 3/85>200) 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( GRW)   
+-------------------------------------------- SCREEN 061
+(                        < 7/ 3/85>201) 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( GRW)   
+-------------------------------------------- SCREEN 062
+( SB 30A A               < 7/ 3/85>202) 
+                                        
+DIR NEXT (  32  )                       
+  FORMAT 13 COLOR 5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+                                        
+PUTBAR   4 AT 100 176 DIM 30 13         
+   MSG 841 AT   0   4                   
+   MSG  +1 AT   0  14                   
+                                        
+NOMSG END                               
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 063
+( GCF FACTORING PROBLEM  < 7/ 3/85>203) 
+\ SB 30                                 
+DIR NEXT (  33  )                       
+  FORMAT  0  COLOR   5 NOGRAPH RUN 0    
+DOES                                    
+ NOMSG TCODE 231 \ SELECT PROBLEM       
+ NOMSG TCODE 253 \ SET UP ANSWER        
+PUTBAR 0 AT 15 130 DIM 50 18            
+PUTBAR 0 AT 0 155 DIM 90 30             
+PUTBAR 0 AT 0 35 DIM 150 114            
+ NOMSG                                  
+END                                     
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 064
+( DISPLAY PROBLEM        < 7/ 3/85>204) 
+                                        
+DIR NEXT (  34  )                       
+  FORMAT 0 COLOR 5                      
+  NOGRAPH RUN 0                         
+DOES                                    
+                                        
+PUTBAR  0 AT 0  50  DIM 140 60          
+PUT 20 60                               
+NOMSG TCODE 254 \ DISPLAY PROBLEM       
+NOMSG TCODE 232 \ PRINT =               
+NOMSG TCODE 246 \ PRINT FACTOR          
+NOMSG TCODE 233 \ DISPLAY (   )         
+  MSG 128 AT 0 155                      
+                                        
+NOMSG END                               
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 065
+(                        < 7/ 3/85>205) 
+                                        
+DIR NEXT (  35  )                       
+  FORMAT  0 COLOR 14                    
+  NOGRAPH           RUN 0               
+DOES                                    
+                                        
+NOMSG TCODE  33 \ .ANS                  
+NOMSG TCODE 230 \ INPUT $ TEST ANSWER   
+?GOFWD 2 \ SKIP NEXT IF RIGHT ANSWER    
+                                        
+NOMSG END                               
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 066
+( WRONG                  < 7/ 3/85>206) 
+\ CONTINUE Y/N                          
+\ GCF MACHINE                           
+DIR NEXT (  36  )                       
+  FORMAT  0 COLOR 14                    
+  NOGRAPH           RUN 0               
+DOES                                    
+    MSG 60 AT 95 138 TCODE 1 RESP 31    
+PUTBAR 0 AT 15 130 DIM 125 19           
+    PUT  15 138                         
+    NOMSG TCODE 252 \ DISSPLAY ANS      
+    PUT  20 85                          
+NOMSG TCODE 254 \ DISPLAY PROBLEM       
+NOMSG TCODE 232  NOMSG TCODE 246        
+NOMSG TCODE 175  NOMSG TCODE 252        
+    NOMSG TCODE 174                     
+    PUTBAR 0 AT 0 155 DIM 90 30         
+  MSG 114 AT 0 155 TCODE 3              
+  MSG 140 AT 0 165                      
+  MSG 141 AT 0 175  UP 6                
+  DOWN 2  NOMSG TCODE 7                 
+  ?GOBACK 3   NOMSG                     
+END                                     
+                               ( GRW)   
+-------------------------------------------- SCREEN 067
+( CORRECT                < 7/ 3/85>207) 
+\ CONTINUE Y/N                          
+\ GCF MACHINE                           
+DIR NEXT (  37  )                       
+                                        
+  FORMAT  0 COLOR 14                    
+  NOGRAPH           RUN 0               
+DOES                                    
+  MSG 59 AT 100 138 TCODE 1             
+  GRAPHIC 23 AT 95 95                   
+    PUT  20 85                          
+NOMSG TCODE 254 \ DISPLAY PROBLEM       
+NOMSG TCODE 232  NOMSG TCODE 246        
+NOMSG TCODE 175  NOMSG TCODE 252        
+    NOMSG TCODE 174                     
+    PUTBAR 0 AT 0 155 DIM 90 30         
+  MSG 114 AT 0 155 TCODE 3              
+  MSG 140 AT 0 165                      
+  MSG 141 AT 0 175                      
+UP 7 DOWN 1 NOMSG TCODE 7               
+?GOBACK 4 NOMSG END                     
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 068
+( RETURN SCREEN          < 8/16/85>208) 
+                                        
+DIR NEXT (  38  )                       
+  FORMAT 0 COLOR 0                      
+  NOGRAPH RUN 0                         
+DOES                                    
+  NOMSG TCODE 23                        
+END                                     
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 069
+( SB 31A A               <12/24/85>209) 
+                                        
+                                        
+DIR NEXT (  39  )                       
+  FORMAT 17 COLOR 5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+                                        
+LINEWIDTH 39 BOX  8 AT 22 70 DIM   1 22 
+LINEWIDTH 59 BOX 12 AT 64 70 DIM   1  2 
+LINEWIDTH  1 BOX  3 AT 20 69 DIM 106 62 
+           PUTBAR 3 AT 33 70 DIM   1 62 
+LINEWIDTH 1 BOX 10 AT 136 97 DIM 135 33 
+                                        
+   MSG 843 AT 0  4                      
+   MSG  +1 AT 0 14                      
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( DAN)   
+-------------------------------------------- SCREEN 070
+( SB 31A A               <12/24/85>210) 
+                                        
+                                        
+   MSG 845 AT  80 102                   
+   MSG  +1 AT  80 117 \  OVER           
+   MSG   4 AT  20  55 \ 4               
+   MSG  22 AT  33  55 \ +               
+   MSG   5 AT  45   S \ 5               
+   MSG   6 AT   0  90 \ 6               
+   MSG   6 AT 120 102                   
+   MSG   4 AT 100 117                   
+   MSG  22 AT  +8   S                   
+   MSG   5 AT  +6   S                   
+                                        
+  MSG 140 AT 0 164                      
+  MSG 141 AT 0 +10                      
+UP 1 DOWN 1 NOMSG TCODE 6               
+NOMSG END                               
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 071
+(                        < 7/ 3/85>211) 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( GRW)   
+-------------------------------------------- SCREEN 072
+(                        < 7/ 3/85>212) 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( GRW)   
+-------------------------------------------- SCREEN 073
+(                        < 7/ 3/85>213) 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( GRW)   
+-------------------------------------------- SCREEN 074
+( SB 31B A FORMAT        <12/24/85>214) 
+                                        
+DIR NEXT (  40  )                       
+  FORMAT 13 COLOR 5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+                                        
+PUTBAR  4 AT 100 176 DIM 30 13          
+  MSG 847 AT 0 4                        
+  MSG  +1 AT 0 14                       
+                                        
+  NOMSG END                             
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( DAN)   
+-------------------------------------------- SCREEN 075
+( SB 31B A               <12/24/85>215) 
+                                        
+DIR NEXT (  41  )                       
+  FORMAT 0                              
+  COLOR   5                             
+  NOGRAPH RUN 0                         
+DOES                                    
+  PUTBAR 0 AT 0 30 DIM 140 120          
+  LINEWIDTH 1                           
+  BOX         3 AT 20 69                
+  DIM        105 72                     
+  LINEWIDTH  50                         
+  BOX         5 AT 22 70  DIM 1 21      
+  LINEWIDTH  49                         
+  BOX         8 AT 74 70  DIM 1 22      
+  PUTBAR 3 AT 35 70 DIM 1 72            
+  PUTBAR 0 AT 15 85 DIM 16 20           
+  PUTBAR 0 AT 41 85 DIM 16 20           
+  NOMSG                                 
+END                                     
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 076
+(                        <12/24/85>216) 
+                                        
+\ SB 31 EXAMPLE                         
+                                        
+DIR NEXT (  42  )                       
+  FORMAT 0  COLOR  5                    
+  NOGRAPH           RUN 0               
+DOES                                    
+                                        
+    NOMSG TCODE 183 \ CLR ANSWER        
+    NOMSG TCODE 236 \ SET K1,K2 = 1     
+    NOMSG TCODE 231 \ PICK B1,B2        
+    NOMSG TCODE 194                     
+    NOMSG TCODE 195                     
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( DAN)   
+-------------------------------------------- SCREEN 077
+( SB 31 EXAMPLE          <12/24/85>217) 
+                                        
+                                        
+                                        
+    PUT 20 35                           
+    NOMSG TCODE 246 \ DISPLAY FACTOR    
+    NOMSG TCODE 175 \ DISPLAY (         
+    NOMSG TCODE 252 \ DISPLAY EXPRES    
+    NOMSG TCODE 174 \ DISPLAY )         
+    NOMSG TCODE 232 \ DISPLAY =         
+    NOMSG TCODE 254 \ DISPLAY PRODUCT   
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( DAN)   
+-------------------------------------------- SCREEN 078
+(                        <12/24/85>218) 
+    PUT 43 93                           
+    NOMSG TCODE 243 \ DISPLAY B2        
+    PUT 17 93                           
+    NOMSG TCODE 242 \ DISPLAY K1K2X^2   
+    PUT  0 93                           
+    NOMSG TCODE 246 ( DISPLAY X )       
+    PUT 17 57                           
+    NOMSG TCODE 247                     
+    PUT 43 57                           
+    NOMSG TCODE 248                     
+    NOMSG TCODE 245                     
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( DAN)   
+-------------------------------------------- SCREEN 079
+(                        <12/24/85>219) 
+                                        
+  LINEWIDTH 1                           
+  BOX 10 AT 147 110 DIM 130 30          
+  MSG 845 AT  78 115                    
+  PUT 120  115                          
+  NOMSG TCODE 246                       
+  MSG 846 AT 78 +11                     
+  PUT  96  S                            
+  NOMSG TCODE 252                       
+                                        
+NOMSG END                               
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 080
+(                        <12/24/85>220) 
+                                        
+DIR NEXT (  43  )                       
+  FORMAT 0  COLOR  5                    
+  NOGRAPH           RUN 0               
+DOES                                    
+                                        
+    MSG 114 AT   0 155 TCODE 3          
+    MSG 140 AT 0 165                    
+    MSG 141 AT 0 175                    
+    UP 4  DOWN 1                        
+    NOMSG TCODE 7                       
+    ?GOBACK 2                           
+                                        
+  NOMSG END                             
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( DAN)   
+-------------------------------------------- SCREEN 081
+(                        < 7/ 3/85>221) 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( GRW)   
+-------------------------------------------- SCREEN 082
+( SB 32 A                <12/24/85>222) 
+                                        
+DIR 0    (  44  )                       
+  FORMAT 17 COLOR 5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+                                        
+   MSG 849 AT 0  4                      
+   MSG  +1 AT 0  14                     
+   MSG 901 AT 52 40                     
+   MSG +1  AT 21 +12                    
+LINEWIDTH 2 BOX 1 AT 20 80 DIM 100 50   
+   PUTBAR 1 AT 34 80 DIM 2 50           
+LINEWIDTH 1                             
+BOX 10 AT 136 100 DIM 135 30            
+   MSG 505 AT 16 69 \  30               
+   MSG  22 AT 34 S  \ +                 
+   MSG   6 AT 48 S  \ 6                 
+   MSG 2 AT 0  100  \ 2                 
+   MSG 10 AT +4 S   \ 0                 
+   MSG 906 AT 16 S  \ 600               
+   MSG +1  AT 44 S  \ 120               
+                                        
+                               ( DAN)   
+-------------------------------------------- SCREEN 083
+( SB 32 A                <12/24/85>223) 
+                                        
+  LINEWIDTH   1                         
+  BOX        10 AT 136 100              
+  DIM       135 30                      
+  MSG 845 AT  75  105  \  DISTRIBUTES   
+  MSG  +1 AT  75  117  \  OVER          
+                                        
+  MSG 2 AT 115 105                      
+  MSG 10 AT +4 S                        
+  MSG 903 AT 98  117  \ (30 + 6)        
+  MSG 140 AT 0 165                      
+  MSG  +1 AT S +10                      
+UP 4 DOWN 1                             
+NOMSG TCODE 6                           
+NOMSG                                   
+END                                     
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( DAN)   
+-------------------------------------------- SCREEN 084
+( SB 32 B PART I         <12/24/85>224) 
+                                        
+DIR NEXT (  45  )                       
+  FORMAT 19 COLOR 5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+   MSG 901 AT 40 30  \  23 X ETC        
+   MSG 904 AT 16 +12 \  (3 * 30) ETC    
+   LINEWIDTH 2                          
+   BOX 1 AT  22  80 DIM 100 50          
+                                        
+  PUTBAR 1 AT 34 80 DIM 2 50            
+  PUTBAR 1 AT 12 105 DIM 50 2           
+   MSG 505 AT 16 69 \ 30                
+   MSG  22 AT 33  S \ +                 
+   MSG   6 AT 45  S \ 6                 
+   MSG 906 AT 16 90 \ 600               
+   MSG   2 AT  0  S \ 2                 
+   MSG  10 AT +4  S \ 0                 
+   MSG 907 AT 43  S \ 120               
+   MSG  22 AT 4 101 \ +                 
+   MSG   3 AT 4 113 \ 3                 
+   MSG 910 AT 16 S  \ 90                
+   MSG 911 AT 43 S  \ 18                
+-------------------------------------------- SCREEN 085
+( SB 32 B PART II        <12/24/85>225) 
+                                        
+                                        
+   LINEWIDTH 1                          
+   BOX 10 AT 136 100 DIM 135 30         
+  MSG 845 AT  80  105  \  DISTRIBUTES   
+   MSG 3 AT 120 S      \  3             
+  MSG 846 AT  80  117  \  OVER          
+   MSG 903 AT 103  S    \  (30 + 6)     
+       MSG 140 AT 0 165                 
+       MSG  +1 AT S +10                 
+UP 1 DOWN 1 NOMSG TCODE 6               
+NOMSG                                   
+END                                     
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( DAN)   
+-------------------------------------------- SCREEN 086
+( SB 32 C PART I         <12/24/85>226) 
+                                        
+DIR NEXT (  46  )                       
+  FORMAT 19          COLOR   5          
+  NOGRAPH            RUN 0              
+DOES                                    
+                                        
+   MSG 902 AT 41 20                     
+   MSG 904 AT 48 +12                    
+   MSG 908 AT 30 +12                    
+                                        
+   LINEWIDTH 2                          
+   BOX 1 AT  22  80 DIM 100 50          
+                                        
+   PUTBAR 1 AT 34 80 DIM 2 50           
+   PUTBAR 1 AT 12 105 DIM 50 2          
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( DAN)   
+-------------------------------------------- SCREEN 087
+( SB 32 C PART II        <12/24/85>227) 
+                                        
+                                        
+   MSG 505 AT 16 69 \ 30                
+   MSG  22 AT 33  S \ +                 
+   MSG   6 AT 45  S \ 6                 
+   MSG 906 AT 16 90 \ 600               
+   MSG   2 AT  0 S  \ 2                 
+   MSG  10 AT +4 S  \ 0                 
+   MSG 907 AT 43 S  \ 120               
+   MSG  22 AT 4 101 \ +                 
+   MSG   3 AT 4 115 \ 3                 
+   MSG 910 AT 16 S  \ 90                
+   MSG 911 AT 43 S  \ 18                
+   LINEWIDTH 1                          
+   BOX 10 AT 136 100 DIM 135 30         
+   MSG 851 AT 80  105                   
+   MSG 900 AT 80  +11                   
+   MSG 140 AT 0 165                     
+   MSG  +1 AT S +10                     
+   UP 1 DOWN 1 NOMSG TCODE 6            
+NOMSG END                               
+                                        
+                                        
+-------------------------------------------- SCREEN 088
+( SB 32 D PART I         < 7/ 3/85>228) 
+                                        
+DIR NEXT (  47  )                       
+  FORMAT 17 COLOR 5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+                                        
+   MSG 899 AT  0 14                     
+                                        
+   MSG 912 AT 36 40                     
+   MSG +1  AT 70 +17                    
+                                        
+   LINEWIDTH 2                          
+   BOX 1 AT  20  80 DIM 100 50          
+   PUTBAR 1 AT 34 80 DIM 2 50           
+   PUTBAR 1 AT 10 105 DIM 50 2          
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 089
+( SB 32 D PART II        < 7/ 3/85>229) 
+                                        
+   MSG  18 AT 18 69                     
+   MSG  22 AT 33 S                      
+   MSG   7 AT 45 S                      
+   MSG  18 AT  4  90                    
+   MSG 915 AT 18 S                      
+   MSG 916 AT 44 S                      
+   MSG  22 AT  4 101                    
+   MSG   4 AT  4 115                    
+   MSG 918 AT 18 S                      
+   MSG 919 AT 44 S                      
+   LINEWIDTH 1                          
+   BOX 10 AT 136 100 DIM 135 30         
+   MSG 845 AT 70  105                   
+   MSG 920 AT 110 S                     
+   MSG 846 AT 70  117                   
+   MSG 921 AT 93  S                     
+   MSG 140 AT 0 165                     
+   MSG  +1 AT S +10                     
+   UP 1 DOWN 1 NOMSG TCODE 6            
+NOMSG END                               
+                                        
+                                        
+-------------------------------------------- SCREEN 090
+( SB 32 E PART I         < 7/ 3/85>230) 
+                                        
+DIR NEXT (  48  )                       
+  FORMAT 19          COLOR   5          
+  NOGRAPH            RUN 0              
+DOES                                    
+                                        
+   MSG 922 AT 40 40                     
+   MSG +1  AT 73 +17                    
+   LINEWIDTH 2                          
+   BOX 1 AT  20  80 DIM 100 50          
+   PUTBAR 1 AT 34 80 DIM 2 50           
+   PUTBAR 1 AT 10 105 DIM 50 2          
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 091
+( SB 32 E  PART II       < 8/16/85>231) 
+                                        
+   MSG  11 AT 16 69                     
+   MSG  22 AT 33 S                      
+   MSG   2 AT 45 S                      
+   MSG  11 AT  4 90                     
+   MSG 925 AT 16 S                      
+   MSG 929 AT 44 S                      
+   MSG  22 AT  4 101                    
+   MSG   1 AT  5 115                    
+   MSG 927 AT 16 S                      
+   MSG 928 AT 44 S                      
+   LINEWIDTH 1                          
+   BOX 10 AT 136 100 DIM 135 30         
+   MSG 845 AT 75  105                   
+   MSG 930 AT 113 S                     
+   MSG 846 AT 75  117                   
+   MSG 931 AT 95  S                     
+   MSG 140 AT 0 164                     
+   MSG  +1 AT S +10                     
+   UP 1 DOWN 1 NOMSG TCODE 6            
+NOMSG END                               
+                                        
+                                        
+-------------------------------------------- SCREEN 092
+( SB 32A A & B FORMAT    < 7/ 3/85>232) 
+                                        
+DIR NEXT (  49  )                       
+  FORMAT 13 COLOR 5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+                                        
+PUTBAR   4 AT 100 176 DIM 30 13         
+  MSG 936 AT  0 0                       
+  MSG 718 AT S +14                      
+  NOMSG END                             
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 093
+( SB 32A A&B PICK        < 7/ 3/85>233) 
+                                        
+DIR NEXT (  50  )                       
+  FORMAT 0 COLOR  5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+    PUTBAR 0 AT 0 30 DIM 150 119        
+    PUTBAR 0 AT 0 154 DIM 90 31         
+    NOMSG TCODE 183 \ CLR ANSWER        
+    NOMSG TCODE 202 \ PICK B1,B2        
+    NOMSG TCODE 196 \ ++PICK            
+    PUT 45 30                           
+    NOMSG TCODE 175 \ DISPLAY (         
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 094
+( SB 32A A&B DISPLAY     < 7/ 3/85>234) 
+                                        
+    NOMSG TCODE 191 \ DISPLAY X         
+    NOMSG TCODE 188 \ DISPLAY B1        
+    NOMSG TCODE 174 \ DISPLAY )         
+    NOMSG TCODE 175 \ DISPLAY (         
+    NOMSG TCODE 191 \ DISPLAY X         
+    NOMSG TCODE 187 \ DISPLAY B2        
+    NOMSG TCODE 174 \ DISPLAY )         
+    NOMSG TCODE 232 \ DISPLAY =         
+    NOMSG TCODE 233                     
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 095
+( SB 32 A                < 7/ 3/85>235) 
+                                        
+  LINEWIDTH    7                        
+  BOX        11 AT  81  66  DIM 40 30   
+  LINEWIDTH    7                        
+  BOX        11 AT  81  94  DIM 40 30   
+  LINEWIDTH    7                        
+  BOX        11 AT  31 66   DIM 40 30   
+  LINEWIDTH    7                        
+  BOX        11 AT  31  94  DIM 40 30   
+  PUTBAR 7 AT 15  98 DIM 48 1           
+  LINEWIDTH    1                        
+  BOX 7 AT    30 65   DIM 97 66         
+  PUTBAR 7  AT 39 66  DIM 1  65         
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 096
+( 32AA                   < 7/ 3/85>236) 
+    PUT  0 79                           
+    NOMSG TCODE 191 ( DISPLAY X )       
+    PUT  0 107                          
+    NOMSG TCODE 188 ( DISPLAY # )       
+    PUT 25 51                           
+    NOMSG TCODE 191                     
+    PUT 45 51   ( 47 )                  
+    NOMSG TCODE 187                     
+  MSG 128 AT 0 155                      
+    NOMSG TCODE 33                      
+    NOMSG TCODE 197 ( ?MRESULT )        
+(   NOMSG TCODE 36 )                    
+?GOFWD 2 SKIPFWD 1                      
+NOMSG END                               
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 097
+( 32A A&B INCORRECT      < 8/16/85>237) 
+DIR NEXT                                
+  FORMAT 0 COLOR 0                      
+  NOGRAPH RUN 0                         
+DOES                                    
+  MSG 60 AT 100 138 TCODE 1             
+    PUT 81  50                          
+    NOMSG TCODE 232 \ =                 
+    NOMSG TCODE 185 \ DISPLAY PROB      
+    PUT 20 79                           
+    NOMSG TCODE 237 \ DISPLAY K1K2X^2   
+    PUT 45 79  ( 47 )                   
+    NOMSG TCODE 187 \ DISPLAY B2        
+    NOMSG TCODE 191 \ DISPLAY X         
+    PUT 45 107  ( 47 )                  
+    NOMSG TCODE 189 \ DISPLAY B1B2      
+    PUT 20 107                          
+    NOMSG TCODE 188                     
+    NOMSG TCODE 191                     
+                                        
+                                        
+                                        
+                                        
+                               ( GRW)   
+-------------------------------------------- SCREEN 098
+( 32A A&B INCORRECT      < 8/16/85>238) 
+  PUTBAR 0 AT 0 155 DIM 90 30           
+  MSG       114 AT   0 155 TCODE 3      
+  MSG       140 AT   0 165              
+  MSG       141 AT   0 175              
+UP 3 DOWN 2 NOMSG TCODE 7               
+?GOBACK 1 NOMSG                         
+END                                     
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 099
+( 32A A&B CORRECT        < 8/16/85>239) 
+                                        
+DIR NEXT                                
+  FORMAT 0 COLOR 0                      
+  NOGRAPH RUN 0                         
+DOES                                    
+  GRAPHIC 17 AT 110 80                  
+    PUT 81  50                          
+    NOMSG TCODE 232 \ =                 
+    NOMSG TCODE 185 \ DISPLAY PROB      
+  PUTBAR 0 AT 0 155 DIM 90 30           
+  MSG       114 AT   0 155 TCODE 3      
+  MSG       140 AT   0 165              
+  MSG       141 AT   0 175              
+UP 4 DOWN 1 NOMSG TCODE 7               
+?GOBACK 2 NOMSG                         
+END                                     
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( GRW)   
+-------------------------------------------- SCREEN 100
+(                        < 7/ 3/85>240) 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 101
+(                        < 7/ 3/85>241) 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( GRW)   
+-------------------------------------------- SCREEN 102
+( SB 33                  < 7/ 3/85>242) 
+                                        
+DIR NEXT (  51  )                       
+  FORMAT 13 COLOR 5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+                                        
+PUTBAR   4 AT 100 176 DIM 30 13         
+  MSG       852 AT  0 4                 
+  MSG        +1 AT  0 14                
+                                        
+NOMSG END                               
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 103
+(                        < 7/ 3/85>243) 
+\ SB 33 EXAMPLE                         
+                                        
+DIR NEXT (  52  )                       
+  FORMAT 0 COLOR  5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+                                        
+    NOMSG TCODE 183 \ CLR ANSWER        
+    NOMSG TCODE 202 \ PICK B1,B2        
+    NOMSG TCODE 169 \ SET +-SIGN        
+    PUT 45 30                           
+    NOMSG TCODE 175 \ DISPLAY (         
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 104
+(                        < 7/ 3/85>244) 
+                                        
+    NOMSG TCODE 191 \ DISPLAY X         
+    NOMSG TCODE 188 \ DISPLAY B1        
+    NOMSG TCODE 174 \ DISPLAY )         
+    NOMSG TCODE 175 \ DISPLAY (         
+    NOMSG TCODE 191 \ DISPLAY X         
+    NOMSG TCODE 187 \ DISPLAY B2        
+    NOMSG TCODE 174 \ DISPLAY )         
+    NOMSG TCODE 232 \ DISPLAY =         
+    NOMSG TCODE 233                     
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 105
+(                        < 7/ 3/85>245) 
+  LINEWIDTH    7                        
+  BOX        14 AT  81  66  DIM 40 30   
+  LINEWIDTH    7                        
+  BOX        14 AT  81  94  DIM 40 30   
+  LINEWIDTH    7                        
+  BOX        11 AT  31 66   DIM 40 30   
+  LINEWIDTH    7                        
+  BOX        11 AT  31  94  DIM 40 30   
+  PUTBAR 7 AT 15  98 DIM 48 1           
+  LINEWIDTH    1                        
+  BOX 7 AT    30 65   DIM 97 66         
+  PUTBAR 7  AT 39 66  DIM 1  65         
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( GRW)   
+-------------------------------------------- SCREEN 106
+(                        < 7/ 3/85>246) 
+    PUT  0 79                           
+    NOMSG TCODE 191 ( DISPLAY X )       
+    PUT  0 107                          
+    NOMSG TCODE 188 ( DISPLAY # )       
+    PUT 25 51                           
+    NOMSG TCODE 191                     
+    PUT 45 51  ( 47 )                   
+    NOMSG TCODE 187                     
+                                        
+    NOMSG RESP 31                       
+    PUT 81  50                          
+    NOMSG TCODE 232                     
+    NOMSG TCODE 185 \ DISPLAY PROB      
+    PUTBAR 0 AT 20 133 DIM 50 14        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( GRW)   
+-------------------------------------------- SCREEN 107
+(                        < 7/ 3/85>247) 
+    PUT 20 79                           
+    NOMSG TCODE 237 \ DISPLAY K1K2X^2   
+    PUT 45 79 ( 47 )                    
+    NOMSG TCODE 187 \ DISPLAY B2        
+    NOMSG TCODE 191 \ DISPLAY X         
+    PUT 45 107  ( 47 )                  
+    NOMSG TCODE 189 \ DISPLAY B1B2      
+    PUT 20 107                          
+    NOMSG TCODE 188 ( DISPLAY # )       
+    NOMSG TCODE 191 ( DISPLAY X )       
+  PUTBAR 0 AT 0 155 DIM 90 30           
+  MSG       114 AT   0 155 TCODE 3      
+  MSG       140 AT   0 165              
+  MSG       141 AT   0 175              
+  UP 6                                  
+  DOWN 1                                
+  NOMSG TCODE 7                         
+  ?GOBACK 1                             
+  NOMSG                                 
+END                                     
+                                        
+                                        
+                               ( GRW)   
+-------------------------------------------- SCREEN 108
+( SB 33 B                < 7/ 3/85>248) 
+DIR NEXT (  53  )                       
+  FORMAT 19 COLOR 5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+                                        
+   MSG 854 AT  24   0                   
+PUTBAR   6 AT  15  35 DIM 5 8           
+   MSG 855 AT  +9   S                   
+   MSG  +1 AT   S +10                   
+PUTBAR   6 AT -10 +20 DIM 5 8           
+   MSG 857 AT  +9   S                   
+   MSG  +1 AT   S +10                   
+   MSG  +1 AT   S +10                   
+PUTBAR   6 AT -10 +20 DIM 5 8           
+   MSG 860 AT  +9   S                   
+   MSG  +1 AT   S +10                   
+   MSG  +1 AT   S +10                   
+   MSG  +1 AT   S +10                   
+                                        
+   MSG 140 AT   0 164                   
+   MSG  +1 AT   S +10                   
+UP 2 DOWN 1 NOMSG TCODE 6 NOMSG END     
+                                        
+-------------------------------------------- SCREEN 109
+( SB 34 A                <12/26/85>249) 
+DIR NEXT (  54  )                       
+  FORMAT 14 COLOR 0                     
+  NOGRAPH RUN 0                         
+DOES                                    
+GRAPHIC   4 AT   0  50                  
+GRAPHIC  19 AT 110  50                  
+PUTBAR    7 AT   5   0 DIM 85 40        
+GRAPHIC  38 AT  30  40                  
+   MSG  864 AT  10   5 TCODE 1          
+   MSG 1012 AT   S +10 TCODE 1          
+   MSG  865 AT   S +10 TCODE 1          
+   NOMSG TCODE 31 NOMSG TCODE 31        
+PUTBAR    0 AT   5   0 DIM 85 55        
+PUTBAR    7 AT  50   0 DIM 55 50        
+GRAPHIC  39 AT  85  50                  
+   MSG  870 AT  55   5 TCODE 1          
+   MSG   +1 AT  55 +10 TCODE 1          
+   MSG   +1 AT  55 +10 TCODE 1          
+   MSG   +1 AT  55 +10 TCODE 1          
+   NOMSG TCODE 31 NOMSG TCODE 31        
+PUTBAR    0 AT  50   0 DIM 55 50        
+PUTBAR    0 AT  80  50 DIM 30 20        
+                               ( DAN)   
+-------------------------------------------- SCREEN 110
+( 34 A                   <12/26/85>250) 
+                                        
+PUTBAR   7 AT   5   0 DIM 75 50         
+GRAPHIC 38 AT  35  50                   
+   MSG 866 AT  10   5 TCODE 1           
+   MSG  +1 AT   S +10 TCODE 1           
+   MSG  +1 AT   S +10 TCODE 1           
+   MSG  +1 AT   S +10 TCODE 1           
+   NOMSG TCODE 31 NOMSG TCODE 31        
+PUTBAR   0 AT   5   0 DIM 75 50         
+PUTBAR   0 AT  35  45 DIM 30 20         
+                                        
+PUTBAR   7 AT  50  10 DIM 50 30         
+GRAPHIC 39 AT  80  40                   
+   MSG 874 AT  55  15 TCODE 1           
+   MSG  +1 AT   S +10 TCODE 1           
+                                        
+   MSG 140 AT   0 167                   
+   MSG 141 AT   0 +10                   
+UP 1 DOWN 1 NOMSG TCODE 6               
+NOMSG END                               
+                                        
+                                        
+                               ( DAN)   
+-------------------------------------------- SCREEN 111
+(  35 A                < <12/26/85>251) 
+                                        
+DIR NEXT (  55  )                       
+  FORMAT 17 COLOR 5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+                                        
+  MSG 876 AT   0  14                    
+  NOMSG TCODE 31                        
+  MSG 890 AT  15  40                    
+LINEWIDTH 1                             
+BOX 10 AT 10 60  DIM 240 30             
+  MSG 887 AT  15  70                    
+  MSG  +1 AT  25  100                   
+  MSG  +1 AT  25  122                   
+                                        
+  MSG 140 AT  0  164                    
+  MSG  +1 AT  0  +10                    
+UP 1 DOWN 1 NOMSG TCODE 6               
+NOMSG END                               
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 112
+( SB 35 B                <12/26/85>252) 
+                                        
+DIR NEXT (  56  )                       
+  FORMAT 17 COLOR 5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+                                        
+   MSG 877 AT   0   0                   
+   MSG  +1 AT   S  14                   
+                                        
+   MSG 890 AT  27  40                   
+   MSG  +1 AT  30  60                   
+                                        
+LINEWIDTH 2 BOX 1 AT 20 80 DIM 100 50   
+PUTBAR   1 AT  34  80 DIM 2 50          
+PUTBAR   1 AT  10 105 DIM 50  2         
+   MSG  11 AT  20  67                   
+   MSG  22 AT  33   S                   
+   MSG  12 AT  45   S                   
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 113
+( SB 35 B                <12/26/85>253) 
+                                        
+   MSG  11 AT   3  90                   
+   MSG 925 AT  20   S                   
+   MSG 893 AT  40   S                   
+   MSG  22 AT   3 102                   
+                                        
+   MSG  12 AT   S 114                   
+   MSG 893 AT  18   S                   
+   MSG 894 AT  40   S                   
+                                        
+   MSG 140 AT   0 164                   
+   MSG  +1 AT   0 +10                   
+UP 1 DOWN 1 NOMSG TCODE 6 NOMSG END     
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 114
+( SB 36 FORMAT & DISP BOX< 7/ 3/85>254) 
+                                        
+DIR NEXT (  57  )                       
+  FORMAT 17 COLOR 5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+   MSG 937 AT 0  4                      
+   MSG  +1 AT 0 14                      
+NOMSG END                               
+                                        
+DIR NEXT (  58  )                       
+  FORMAT 0 COLOR  5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+                                        
+LINEWIDTH 7 BOX 14 AT 81  76 DIM 40 30  
+LINEWIDTH 7 BOX 14 AT 81 104 DIM 40 30  
+LINEWIDTH 7 BOX 11 AT 31  76 DIM 40 30  
+LINEWIDTH 7 BOX 11 AT 31 104 DIM 40 30  
+PUTBAR    7        AT 15 108 DIM 48  1  
+LINEWIDTH 1 BOX  7 AT 30  75 DIM 97 66  
+PUTBAR    7        AT 39  76 DIM  1 65  
+                                        
+                                        
+-------------------------------------------- SCREEN 115
+( SB 36 DISPLAY BOX      < 7/ 3/85>255) 
+                                        
+   MSG  18 AT  25  62                   
+   MSG  21 AT  38   S                   
+   MSG   3 AT  50   S                   
+   MSG  18 AT   4  91                   
+   MSG 942 AT  25   S                   
+   MSG 943 AT  47   S                   
+   MSG  22 AT   4 105                   
+   MSG   3 AT   S 119                   
+   MSG 945 AT  20   S                   
+   MSG 946 AT  47   S                   
+   MSG 939 AT  41  35                   
+   MSG 940 AT  74  50                   
+NOMSG TCODE 31 NOMSG TCODE 31           
+PUTBAR   0 AT   4 105 DIM 10 25         
+PUTBAR   0 AT  38  62 DIM 40 11         
+PUTBAR   0 AT  40  75 DIM 32 33         
+PUTBAR   0 AT  15 109 DIM 24 38         
+   MSG 140 AT   0 164                   
+   MSG  +1 AT   0 +10                   
+UP 2 DOWN 1 NOMSG TCODE 7 ?GOFWD 1      
+NOMSG END                               
+                                        
+-------------------------------------------- SCREEN 116
+( SB 36                  < 7/ 3/85>256) 
+DIR NEXT                                
+  FORMAT 13 COLOR 5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+PUTBAR  4 AT 100 176 DIM 30 13          
+    MSG 947 AT 0 4  \  PRACTICE MAKES   
+    MSG  +1 AT S +10                    
+NOMSG                                   
+END                                     
+                                        
+ DIR NEXT (  59  )                      
+  FORMAT 0  COLOR  5                    
+  NOGRAPH           RUN 0               
+DOES                                    
+  PUTBAR 0 AT 0 28 DIM 140 122          
+  PUTBAR 0 AT 0 154 DIM 90 31           
+    NOMSG TCODE 183 \ CLR ANSWER        
+    NOMSG TCODE 202 \ PICK B1,B2        
+    NOMSG TCODE 195                     
+    NOMSG TCODE 194                     
+    PUT 45 30                           
+    NOMSG TCODE 175 \ DISPLAY (         
+                                        
+-------------------------------------------- SCREEN 117
+( SB 36 DISPLAY FACTORS  < 7/ 3/85>257) 
+                                        
+    NOMSG TCODE 191   \ DISPLAY X       
+    NOMSG TCODE 188   \ DISPLAY B1      
+    NOMSG TCODE 174   \ DISPLAY )       
+    NOMSG TCODE 175   \ DISPLAY (       
+    NOMSG TCODE 191   \ DISPLAY X       
+    NOMSG TCODE 187   \ DISPLAY B2      
+    NOMSG TCODE 174   \ DISPLAY )       
+    NOMSG TCODE 232   \ DISPLAY =       
+    NOMSG TCODE 233                     
+                                        
+END                                     
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 118
+( SB 36                  < 7/ 3/85>258) 
+                                        
+DIR NEXT (  60  )                       
+  FORMAT 0 COLOR  5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+                                        
+  LINEWIDTH    7                        
+  BOX        5 AT  81  66  DIM 40 30    
+  LINEWIDTH    7                        
+  BOX        5 AT  81  94  DIM 40 30    
+  LINEWIDTH    7                        
+  BOX        5 AT  31 66   DIM 40 30    
+  LINEWIDTH    7                        
+  BOX        5 AT  31  94  DIM 40 30    
+  PUTBAR 7 AT 15  98 DIM 48 1           
+  LINEWIDTH    1                        
+  BOX 7 AT    30 65   DIM 97 66         
+  PUTBAR 7  AT 39 66  DIM 1  65         
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 119
+( SB36                   < 8/16/85>259) 
+                                        
+    PUT  0 79                           
+    NOMSG TCODE 191   ( DISPLAY X )     
+    PUT  0 107                          
+    NOMSG TCODE 188   ( DISPLAY # )     
+    PUT 25 51                           
+    NOMSG TCODE 191                     
+    PUT 47 51                           
+    NOMSG TCODE 187                     
+    NOMSG RESP 31                       
+    PUTBAR 0 AT 20 133 DIM 50 14        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 120
+( SB36                   < 8/16/85>260) 
+                                        
+    MSG 128 AT 0 154                    
+    NOMSG TCODE 33                      
+(   NOMSG TCODE 36 )                    
+    NOMSG TCODE 197                     
+  ?GOFWD 2                              
+  NOMSG    END                          
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 121
+( 36 INCORRECT           < 8/16/85>261) 
+DIR NEXT                                
+  FORMAT 0 COLOR 0                      
+  NOGRAPH RUN 0                         
+DOES                                    
+  MSG 60 AT 100 138 TCODE 1             
+    PUT 20 79                           
+    NOMSG TCODE 237  \ DISPLAY K1K2X^2  
+    PUT 45 79                           
+    NOMSG TCODE 187   \ DISPLAY B2 )    
+    NOMSG TCODE 191   \ DISPLAY X  )    
+    PUT 45 107                          
+    NOMSG TCODE 189   \ DISPLAY B1B2    
+    PUT 20 107                          
+    NOMSG TCODE 188   ( DISPLAY # )     
+    PUT 82 50    TEMIT 61               
+    PUT 88  50                          
+    NOMSG TCODE 185   \ DISPLAY PROB    
+  PUTBAR 0 AT 0 155 DIM 90 30           
+  MSG 114 AT   0 155 TCODE 3            
+  MSG 140 AT 0 165  MSG +1 AT 0 175     
+  UP 5  DOWN 2 NOMSG TCODE 7            
+?GOBACK 2 NOMSG                         
+END                            ( GRW)   
+-------------------------------------------- SCREEN 122
+( 36 CORRECT             < 8/16/85>262) 
+                                        
+DIR NEXT                                
+  FORMAT 0 COLOR 0                      
+  NOGRAPH RUN 0                         
+DOES                                    
+  GRAPHIC 17 AT 110 80                  
+    PUT 86 50                           
+    TEMIT 61                            
+    PUT 92  50                          
+    NOMSG TCODE 185   \ DISPLAY PROB    
+                                        
+  PUTBAR 0 AT 0 155 DIM 90 30           
+  MSG 114 AT   0 155 TCODE 3            
+  MSG 140 AT 0 165  MSG +1 AT 0 175     
+  UP 6  DOWN 1                          
+NOMSG TCODE 7 ?GOBACK 3 NOMSG           
+END                                     
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( GRW)   
+-------------------------------------------- SCREEN 123
+( SB 36 C                <12/26/85>263) 
+                                        
+DIR NEXT                                
+  FORMAT 17 COLOR 5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+   MSG 183 AT   0  14                   
+   MSG 193 AT  30  45                   
+LINEWIDTH 1 BOX 10 AT 20 65 DIM 200 20  
+   MSG 200 AT  17  70                   
+   MSG 208 AT  52 +30                   
+   MSG 213 AT   S +20                   
+                                        
+   MSG 140 AT   0 164                   
+   MSG  +1 AT   S +10                   
+UP 6 DOWN 1 NOMSG TCODE 6 NOMSG END     
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                               ( DAN)   
+-------------------------------------------- SCREEN 124
+( SB 36 D                <12/26/85>264) 
+                                        
+DIR NEXT                                
+  FORMAT 17 COLOR 5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+                                        
+   MSG 224 AT   0   0                   
+   MSG  +1 AT   S +14                   
+   MSG 244 AT  40  40                   
+   MSG 455 AT +23 +17                   
+                                        
+LINEWIDTH 7 BOX 14 AT 81  81 DIM 40 30  
+LINEWIDTH 7 BOX 14 AT 81 109 DIM 40 30  
+LINEWIDTH 7 BOX 11 AT 31  81 DIM 40 30  
+LINEWIDTH 7 BOX 11 AT 31 109 DIM 40 30  
+PUTBAR    7        AT 15 113 DIM 48  1  
+LINEWIDTH 1 BOX  7 AT 30  80 DIM 97 66  
+PUTBAR    7        AT 39  81 DIM  1 65  
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 125
+( SB 27 D                <12/26/85>265) 
+                                        
+   MSG  11 AT  25  67                   
+   MSG  22 AT  38   S                   
+   MSG  12 AT  50   S                   
+                                        
+   MSG  11 AT   4  95                   
+   MSG 925 AT  24   S                   
+   MSG 893 AT  46   S                   
+                                        
+   MSG  22 AT   4 108                   
+   MSG  12 AT   4 125                   
+   MSG 893 AT  22   S                   
+   MSG 894 AT  46   S                   
+                                        
+   MSG 140 AT   0 164                   
+   MSG  +1 AT   S +10                   
+UP 1 DOWN 1 NOMSG TCODE 6 NOMSG END     
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 126
+( SB 27 E                <12/26/85>266) 
+                                        
+DIR NEXT                                
+  FORMAT 17 COLOR 5                     
+  NOGRAPH RUN 0                         
+DOES                                    
+                                        
+   MSG 473 AT   0  14                   
+   MSG 478 AT  30  45                   
+LINEWIDTH 1 BOX 10 AT 20 65 DIM 200 20  
+   MSG 980 AT  17  70                   
+   MSG 981 AT  52 +30                   
+   MSG 993 AT   S +20                   
+                                        
+   MSG 140 AT   0 164                   
+   MSG  +1 AT   S +10                   
+UP 1 DOWN 1 NOMSG TCODE 6 NOMSG END     
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+-------------------------------------------- SCREEN 127
+( RETURN                 <12/26/85>267) 
+                                        
+DIR NEXT                                
+  FORMAT 0 COLOR 0                      
+  NOGRAPH RUN 0                         
+DOES                                    
+                                        
+NOMSG TCODE 23                          
+                                        
+NOMSG END                               
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
